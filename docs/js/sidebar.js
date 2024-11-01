@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async function () {
-  return await fetch("./js/sidebar.js")
+  return await fetch("../sidebar.html")
   .then(response => response.text())
   .then(data => {
 	  // Insere o conteúdo carregado no contêiner do sidebar
