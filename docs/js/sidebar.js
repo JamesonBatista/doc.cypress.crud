@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async function () {
-  return await fetch("doc.cypress.crud/docs/sidebar.html")
+  return await fetch("docs/sidebar.html")
   .then(response => response.text())
   .then(data => {
 	  // Insere o conteúdo carregado no contêiner do sidebar
