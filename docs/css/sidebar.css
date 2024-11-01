@@ -1,0 +1,84 @@
+.sidebar {
+	width: 250px;
+	background-color: #ffffff;
+	padding: 20px;
+	border-right: 1px solid #ddd;
+	height: 100vh;
+	overflow-y: auto;
+	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+
+}
+
+.logo-header img {
+	display: block;
+	margin: 0 auto 20px auto;
+	max-width: 150px;
+	height: auto;
+	border-radius: 100%;
+}
+
+ul {
+	list-style: none;
+	/* Remove os pontos da lista */
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	margin-bottom: 10px;
+	/* Espaçamento entre os itens */
+}
+
+.menu-button {
+	background: none;
+	border: none;
+	color: #333;
+	text-align: left;
+	width: 100%;
+	cursor: pointer;
+	font-size: 16px;
+	padding: 10px 0;
+	align-items: center;
+	outline: none;
+	transition: color 0.3s, transform 0.3s;
+}
+
+.menu-button:hover {
+	color: #4f46e5;
+}
+
+.menu-button svg {
+
+	margin-right: 8px;
+	transform: rotate(-90deg);
+	transition: transform 0.3s;
+	width: 12px;
+	/* Ajustado para tamanho menor */
+	height: 12px;
+	/* Ajustado para tamanho menor */
+	stroke-width: 1.5;
+	/* Espessura menor para visual mais leve */
+	color: #333;
+	/* Ajuste a cor conforme desejado */
+}
+
+.submenu {
+	padding-left: 20px;
+}
+
+.submenu a {
+	text-decoration: none;
+	color: #555;
+	display: block;
+	padding: 8px 0;
+	font-size: 14px;
+	transition: color 0.3s;
+}
+
+.submenu a:hover {
+	color: #4f46e5;
+}
