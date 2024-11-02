@@ -1,9 +1,10 @@
 @import url('./sidebar.css');
+
 body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
+	margin: 0;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background-color: #f9f9f9;
+	color: #333;
 	display: flex;
 	margin-bottom: 50px;
 	overflow-y: hidden;
@@ -11,103 +12,90 @@ body {
 
 .content {
 	width: 100%;
-	margin-left: 300px; 
-    padding: 20px; /* Espaçamento interno da área de conteúdo */
-    overflow-y: auto; /* Permite rolagem apenas no conteúdo */
-    height: 100vh;
-    box-sizing: border-box; /* Inclui padding na altura */
+	margin-left: 300px;
+	padding: 20px;
+	/* Espaçamento interno da área de conteúdo */
+	overflow-y: auto;
+	/* Permite rolagem apenas no conteúdo */
+	height: 100vh;
+	box-sizing: border-box;
+	/* Inclui padding na altura */
 }
 
 h1 {
-    color: #4f46e5;
-    text-align: center;
+	color: #4f46e5;
+	text-align: center;
 }
 
 h2 {
-    margin-top: 20px;
-    color: #333;
+	margin-top: 20px;
+	color: #333;
 }
 
-p, li {
-    line-height: 1.6;
+p,
+li {
+	line-height: 1.6;
 }
 
 pre {
-    background-color: #f1f1f1;
-    padding: 10px;
-    border-radius: 4px;
-    overflow-x: auto;
-    margin-bottom: 20px;
+	background-color: #f1f1f1;
+	padding: 10px;
+	border-radius: 4px;
+	overflow-x: auto;
+	margin-bottom: 20px;
 }
 
 img {
-    display: block;
-    max-width: 90%;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	display: block;
+	max-width: 90%;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .card {
-    padding: 15px;
-    border-radius: 10px;
-    margin: 20px 0;
+	padding: 15px;
+	border-radius: 10px;
+	margin: 20px 0;
 }
 
 .card img {
-    border-radius: 8px;
+	border-radius: 8px;
 	width: 100%;
 	object-fit: contain;
 
 }
-.prejson{
+
+.prejson {
 	max-width: 500px;
 	height: auto;
 	font-size: 20px;
 }
-.pretest{
-color: green;
+
+.pretest {
+	color: green;
 }
-.menu-toggle {
-    display: none; /* Oculta por padrão */
-}
+
+
 
 @media (max-width: 768px) {
-    .sidebar {
-        width: 0; /* Oculta o sidebar por padrão */
-        position: fixed;
-        height: 100vh;
-        overflow-y: auto;
-        transition: width 0.3s ease;
-        z-index: 1000;
-    }
 
-    .sidebar.open {
-        width: 250px; /* Largura desejada quando aberto */
-    }
+	.content {
+		max-width: 100%;
+		height: 100vh;
+		padding: 0;
+		margin: 0;
+		position: relative;
+		height: 100vh;
+		top: 90px;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 30px;
+		transition: margin-left 0.3s ease;
+	}
+	.content.shifted {
+		margin-left: 250px;
+		/* Move o conteúdo para a direita quando o sidebar está aberto */
+	}
 
-    .menu-toggle {
-        display: block;
-        position: fixed;
-        top: 15px;
-        left: 15px;
-        background-color: #1f2937;
-        color: #ffffff;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-        z-index: 1100;
-        font-size: 24px;
-        border-radius: 5px;
-    }
 
-    .content {
-        margin-left: 0; /* Remove o espaço lateral em dispositivos móveis */
-        padding: 20px;
-        max-width: 100%; /* Usa a largura total da tela */
-        transition: margin-left 0.3s ease;
-    }
-
-    .content.shifted {
-        margin-left: 250px; /* Move o conteúdo para a direita quando o sidebar está aberto */
-    }
 }
