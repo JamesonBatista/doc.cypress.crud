@@ -5,6 +5,8 @@ body {
     background-color: #f9f9f9;
     color: #333;
 	display: flex;
+	margin-bottom: 50px;
+	overflow-y: hidden;
 }
 
 .content {
@@ -64,4 +66,48 @@ img {
 }
 .pretest{
 color: green;
+}
+.menu-toggle {
+    display: none; /* Oculta por padrão */
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 0; /* Oculta o sidebar por padrão */
+        position: fixed;
+        height: 100vh;
+        overflow-y: auto;
+        transition: width 0.3s ease;
+        z-index: 1000;
+    }
+
+    .sidebar.open {
+        width: 250px; /* Largura desejada quando aberto */
+    }
+
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        background-color: #1f2937;
+        color: #ffffff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 1100;
+        font-size: 24px;
+        border-radius: 5px;
+    }
+
+    .content {
+        margin-left: 0; /* Remove o espaço lateral em dispositivos móveis */
+        padding: 20px;
+        max-width: 100%; /* Usa a largura total da tela */
+        transition: margin-left 0.3s ease;
+    }
+
+    .content.shifted {
+        margin-left: 250px; /* Move o conteúdo para a direita quando o sidebar está aberto */
+    }
 }

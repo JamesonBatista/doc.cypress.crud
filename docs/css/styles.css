@@ -1,69 +1,130 @@
 @import url('./sidebar.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&family=Lato:wght@400;700&family=Montserrat:wght@400;700&family=Raleway:wght@400;700&family=Playfair+Display:wght@400;700&family=Merriweather:wght@400;700&family=Source+Sans+Pro:wght@400;700&family=Nunito:wght@400;700&display=swap');
+
 
 body {
     display: flex;
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-}
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212; /* Fundo escuro */
+    color: #ffffff;
+	overflow-y: hidden;
 
-
-.hidden {
-    display: none;
 }
 
 .content {
-    margin-left: 300px;
-    padding: 20px;
-    /* Espaçamento interno da área de conteúdo */
-    overflow-y: auto;
-    /* Permite rolagem apenas no conteúdo */
-    height: 100vh;
-    box-sizing: border-box;
-    /* Inclui padding na altura */
+    margin-left: 350px; /* Espaço suficiente para não sobrepor a sidebar */
+    padding: 40px;
+    background: #1e293b;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: calc(90% - 340px); /* Evita que o content ultrapasse a tela */
+    margin-top: 10px; /* Eleva a apresentação */
+    animation: fadeIn 1.5s ease-in-out;
+    text-align: center;
 }
-
-.video-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.video-card {
-    background-color: #ffffff;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 80%;
-}
-
-video {
-    border-radius: 10px;
-    width: 100%;
+.content section{
+  position: relative;
+  top: -90px;
 }
 
 .title {
-    font-family: 'Roboto', sans-serif;
-    /* Escolha uma fonte elegante */
-    font-size: 3rem;
-    /* Tamanho do texto grande */
-    font-weight: 700;
-    /* Negrito */
-    color: #4F46E5;
-    /* Azul elegante */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    /* Sombra suave */
+    font-size: 4rem;
+    font-weight: 800;
+    color: #e2e8f0; /* Cor base neutra */
     text-align: center;
-    /* Centraliza o texto */
-    margin-top: 20px;
-    /* Espaçamento superior */
-    margin-bottom: 30px;
-    /* Espaçamento inferior */
-    letter-spacing: 1px;
-    /* Espaçamento entre letras */
+    text-transform: uppercase;
+    margin-bottom: 40px; /* Espaçamento inferior */
+    margin-top: 50px; /* Espaçamento superior */
+    letter-spacing: 1.5px;
+    display: inline-block;
 }
 
-.title-container {
-    width: 100%;
+.title span {
+    display: inline-block;
+    animation: colorChange 10s infinite; /* Animação mais longa */
+    animation-delay: calc(var(--i) * 0.9s); /* Atraso sequencial */
+}
+
+@keyframes colorChange {
+    0%, 100% {
+        color: #e2e8f0;
+        font-family: 'Poppins', sans-serif;
+    }
+    10% {
+        font-family: 'Roboto', sans-serif;
+        color: #38bdf8;
+    }
+    20% {
+        font-family: 'Open Sans', sans-serif;
+        color: #48b1f3;
+    }
+    30% {
+        font-family: 'Lato', sans-serif;
+        color: #5ac7e5;
+    }
+    40% {
+        font-family: 'Montserrat', sans-serif;
+        color: #6ed9f0;
+    }
+    50% {
+        font-family: 'Raleway', sans-serif;
+        color: #7fe5ff;
+    }
+    60% {
+        font-family: 'Playfair Display', serif;
+        color: #8feaff;
+    }
+    70% {
+        font-family: 'Merriweather', serif;
+        color: #9fefff;
+    }
+    80% {
+        font-family: 'Source Sans Pro', sans-serif;
+        color: #a3f5ff;
+    }
+    90% {
+        font-family: 'Nunito', sans-serif;
+        color: #b0f9ff;
+    }
+}
+
+
+
+
+.version {
+    font-size: 1.25rem;
+    color: #a0aec0; /* Cinza suave */
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+video {
+    width: 90%;
+    border-radius: 15px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideThrough {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 100%;
+    }
+    100% {
+        left: 100%;
+    }
 }
