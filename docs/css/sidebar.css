@@ -40,7 +40,7 @@
 @media (max-width: 768px) {
 
 	.sidebar {
-		width: 0;
+		display: none;
 		overflow: hidden;
 		transition: width 0.3s ease;
 		position: fixed;
@@ -60,7 +60,7 @@
 		position: fixed;
 		top: 15px;
 		left: 15px;
-		background-color: #1f2937;
+		background-color: #1f293721;
 		color: #ffffff;
 		border: none;
 		padding: 10px;

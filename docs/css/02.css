@@ -9,7 +9,8 @@ body {
 	margin-bottom: 50px;
 	overflow-y: hidden;
 }
-a{
+
+a {
 	color: white;
 }
 
@@ -83,19 +84,21 @@ img {
 
 @media (max-width: 768px) {
 
+
 	.content {
+		display: block;
+		flex-direction: column;
 		max-width: 100%;
 		height: 100vh;
-		padding: 0;
 		margin: 0;
-		position: relative;
-		height: 100vh;
-		top: 90px;
+		top: 0;
+		text-align: center;
 		align-items: center;
 		justify-content: center;
 		margin-bottom: 30px;
 		transition: margin-left 0.3s ease;
 	}
+
 	.content.shifted {
 		margin-left: 250px;
 		/* Move o conteúdo para a direita quando o sidebar está aberto */
