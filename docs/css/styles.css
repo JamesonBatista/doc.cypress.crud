@@ -102,10 +102,12 @@ body {
     .version {
         display: none;
     }
+
     video {
-        width: 70%;
+        width: 50% !important;
         border-radius: 15px;
     }
+
 }
 
 @keyframes colorChange {
