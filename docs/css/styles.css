@@ -103,6 +103,10 @@ body {
     .version {
         display: none;
     }
+    video {
+        width: 70%;
+        border-radius: 15px;
+    }
 }
 
 @keyframes colorChange {
