@@ -1,23 +1,8 @@
-/* .sidebar {
-	width: 250px;
-	background-color: #ffffff;
-	padding: 20px;
-	border-right: 1px solid #ddd;
-	height: 100vh;
-	overflow-y: auto;
-	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-	position: fixed;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	margin-bottom: 50px;
 
-} */
 .sidebar {
 	width: 250px;
 	min-height: 100vh;
 	background-color: #1f2937;
-	border-right: 1px solid #ddd;
 	position: fixed;
 	overflow-y: auto;
 

@@ -4,30 +4,27 @@
 
 
 body {
-    display: flex;
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #121212;
     color: #ffffff;
-
+    background-color: #1e293b; /* Define um fundo escuro consistente */
 }
 
 .content {
-    position: absolute;
-    margin-left: 300px;
-    overflow-y: hidden;
-    /* Espaço suficiente para não sobrepor a sidebar */
-    padding: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-left: 290px;
+    max-width: 100%;
+    justify-content: center;
+    padding: 20px; /* Adicionado um padding leve */
     border-radius: 15px;
+    background-color: #1e293b; /* Mesmo fundo do sidebar */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    /* max-width: calc(90% - 340px); */
-    /* Evita que o content ultrapasse a tela */
-    margin-top: 10px;
-    /* Eleva a apresentação */
     animation: fadeIn 1.5s ease-in-out;
     text-align: center;
-
 }
+
 
 
 .title {
@@ -57,6 +54,17 @@ body {
     /* Atraso sequencial */
 }
 
+.video-container {
+    margin-bottom: 20px; /* Espaçamento entre os vídeos */
+}
+
+.video-card {
+    border-radius: 0; /* Remove a borda arredondada do vídeo */
+    box-shadow: none; /* Remove a sombra */
+    background: none; /* Remove o fundo de card */
+}
+
+
 @keyframes backgroundAnimation {
     0% {
         background-color: #4e46e507;
@@ -80,10 +88,6 @@ body {
 }
 
 @media (max-width: 768px) {
-    .title {
-        display: none;
-    }
-
     .content {
         max-width: 100%;
         padding: 0;
@@ -96,7 +100,6 @@ body {
 
     .content section {
         top: 100px;
-
     }
 
     .version {
@@ -104,10 +107,9 @@ body {
     }
 
     video {
-        width: 50% !important;
-        border-radius: 15px;
+        width: 80% !important;
+        border-radius: 10px;
     }
-
 }
 
 @keyframes colorChange {
@@ -166,7 +168,6 @@ body {
 
 
 
-
 .version {
     font-size: 1.25rem;
     color: #a0aec0;
@@ -179,7 +180,8 @@ body {
 
 video {
     width: 90%;
-    border-radius: 15px;
+    border-radius: 10px; /* Mantém uma leve borda arredondada nos vídeos */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra leve */
 }
 
 @keyframes fadeIn {
