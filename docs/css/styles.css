@@ -7,7 +7,8 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     color: #ffffff;
-    background-color: #1e293b; /* Define um fundo escuro consistente */
+    background-color: #1e293b;
+    /* Define um fundo escuro consistente */
 }
 
 .content {
@@ -17,9 +18,11 @@ body {
     margin-left: 290px;
     max-width: 100%;
     justify-content: center;
-    padding: 20px; /* Adicionado um padding leve */
+    padding: 20px;
+    /* Adicionado um padding leve */
     border-radius: 15px;
-    background-color: #1e293b; /* Mesmo fundo do sidebar */
+    background-color: #1e293b;
+    /* Mesmo fundo do sidebar */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     animation: fadeIn 1.5s ease-in-out;
     text-align: center;
@@ -41,27 +44,51 @@ body {
     letter-spacing: 1.5px;
     display: inline-block;
     border-radius: 10px;
-    animation: backgroundAnimation 8s infinite;
     padding: 10px 10px;
 
 }
 
 .title span {
     display: inline-block;
-    animation: colorChange 5s infinite;
-    /* Animação mais longa */
-    animation-delay: calc(var(--i) * 0.9s);
-    /* Atraso sequencial */
+    animation: waveGlow 5s linear infinite;
+    animation-delay: calc(var(--i) * 0.3s);
+}
+
+@keyframes waveGlow {
+    0% {
+        opacity: 0.3;
+        text-shadow: 0px 0px 5px cyan;
+    }
+    25% {
+        opacity: 0.7;
+        text-shadow: 0px 0px 15px cyan;
+    }
+    50% {
+        opacity: 1;
+        text-shadow: 0px 0px 40px cyan, 0px 0px 80px cyan;
+    }
+    75% {
+        opacity: 0.7;
+        text-shadow: 0px 0px 15px cyan;
+    }
+    100% {
+        opacity: 0.3;
+        text-shadow: 0px 0px 5px cyan;
+    }
 }
 
 .video-container {
-    margin-bottom: 20px; /* Espaçamento entre os vídeos */
+    margin-bottom: 20px;
+    /* Espaçamento entre os vídeos */
 }
 
 .video-card {
-    border-radius: 0; /* Remove a borda arredondada do vídeo */
-    box-shadow: none; /* Remove a sombra */
-    background: none; /* Remove o fundo de card */
+    border-radius: 0;
+    /* Remove a borda arredondada do vídeo */
+    box-shadow: none;
+    /* Remove a sombra */
+    background: none;
+    /* Remove o fundo de card */
 }
 
 
@@ -109,6 +136,9 @@ body {
     video {
         width: 80% !important;
         border-radius: 10px;
+    }
+    .title{
+        font-size: 2rem;
     }
 }
 
@@ -169,19 +199,59 @@ body {
 
 
 .version {
-    font-size: 1.25rem;
-    color: #a0aec0;
-    /* Cinza suave */
-    text-align: center;
-    font-weight: 600;
-    margin-bottom: 30px;
-    letter-spacing: 1px;
+    position: relative;
+    display: inline-block; /* Para garantir que o ponto de luz se posicione em relação à div */
+    padding: 10px;
+    overflow: hidden; /* Evita que o ponto de luz ultrapasse a área da div */
+    border-radius: 10%;
 }
+
+.version.light::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%; /* Torna o ponto de luz circular */
+    background-color: cyan; /* Cor do ponto de luz */
+    box-shadow: 0 0 30px 10px cyan; /* Cria um efeito de brilho */
+    animation: rotateLight 5s linear infinite; /* Animação contínua */
+}
+
+@keyframes rotateLight {
+    0% {
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    25% {
+        top: 50%;
+        left: 100%;
+        transform: translate(-50%, -50%);
+    }
+    50% {
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    75% {
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
 
 video {
     width: 90%;
-    border-radius: 10px; /* Mantém uma leve borda arredondada nos vídeos */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra leve */
+    border-radius: 10px;
+    /* Mantém uma leve borda arredondada nos vídeos */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    /* Adiciona uma sombra leve */
 }
 
 @keyframes fadeIn {

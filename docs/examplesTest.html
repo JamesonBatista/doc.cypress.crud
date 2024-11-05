@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Firs Test</title>
+	<link rel="stylesheet" href="./css/02.css">
+	<script src="./sidebar.js"></script>
+
+</head>
+
+<body>
+	<div id="sidebar-container"></div>
+
+	<div class="content">
+
+		<h2>Using cypress-crud</h2>
+		<ol>
+			<!--  -->
+			<li>Simple request create new json in <b>cypress/fixtures</b></li>
+			<div class="card confjson" style="display: flex; justify-content: space-around;">
+				<div id="json1" class="jsons"></div>
+				<a href="./examples/01.png" target="_blank" class="confjson" rel="noopener noreferrer">
+					<img src="./examples/01.png" alt="Cypress Opening">
+
+				</a>
+			</div>
+			<!--  -->
+
+			<li>Simple request use <b>cypress.env.json</b> reqres path <b> "reqres": "https://reqres.in/api/users"</b>
+			</li>
+			<div class="card confjson" style="display: flex; justify-content: space-around;">
+				<div id="json2" class="jsons"></div>
+				<a href="./examples/01.png" target="_blank" class="confjson" rel="noopener noreferrer">
+					<img src="./examples/01.png" alt="Cypress Opening">
+
+				</a>
+			</div>
+			<!--  -->
+
+			<li>Simple request use <b>cypress.env.json</b> reqres path <b> "reqres": "https://reqres.in/api/users"</b>
+				and validation several keys
+			</li>
+			<div class="card confjson" style="display: flex; justify-content: space-around;">
+				<div id="json3" class="jsons"></div>
+				<a href="./examples/02.png" target="_blank" class="confjson" rel="noopener noreferrer">
+					<img src="./examples/02.png" alt="Cypress Opening">
+
+				</a>
+			</div>
+			<!--  -->
+
+			<li>Validation and saves keys
+			</li>
+			<div class="card confjson" style="display: flex; justify-content: space-around;">
+				<div id="json4" class="jsons"></div>
+				<a href="./examples/03.png" target="_blank" class="confjson" rel="noopener noreferrer">
+					<img src="./examples/03.png" alt="Cypress Opening">
+
+				</a>
+			</div>
+			<!--  -->
+			<li><b>/POST</b> using data saved in before request
+			</li>
+			<div class="card confjson" style="display: flex; justify-content: space-around;">
+				<a href="./examples/05.png" target="_blank" class="confjson" rel="noopener noreferrer">
+					<img src="./examples/05.png" alt="Cypress Opening">
+
+				</a>
+			</div>
+			<!--  -->
+			<li><b>/POST</b> using data saved in before request and validation
+			</li>
+			<div class="card confjson" style="display: flex; justify-content: space-around;">
+				<a href="./examples/06.png" target="_blank" class="confjson" rel="noopener noreferrer">
+					<img src="./examples/06.png" alt="Cypress Opening">
+
+				</a>
+			</div>
+			<!--  -->
+			<li><b>/DELETE</b> using <b>id</b> before request
+			</li>
+			<div class="card confjson" style="display: flex; justify-content: space-around;">
+				<a href="./examples/07.png" target="_blank" class="confjson" rel="noopener noreferrer">
+					<img src="./examples/07.png" alt="Cypress Opening">
+
+				</a>
+			</div>
+			<!--  -->
+			<li><b>/GET</b> validation keys in array of objects
+			</li>
+			<div class="card confjson" style="display: flex; justify-content: space-around;">
+				<a href="./examples/08.png" target="_blank" class="confjson" rel="noopener noreferrer">
+					<img src="./examples/08.png" alt="Cypress Opening">
+
+				</a>
+			</div>
+			<!--  -->
+			<!--  -->
+			<li><b>/GET</b> validation keys in array of objects for position
+			</li>
+			<div class="card confjson" style="display: flex; justify-content: space-around;">
+				<a href="./examples/09.png" target="_blank" class="confjson" rel="noopener noreferrer">
+					<img src="./examples/09.png" alt="Cypress Opening">
+
+				</a>
+			</div>
+			<!--  -->
+			<li><b>/GET/POST/PUT/DELETE</b> validation keys in array of objects for position and change save name
+			</li>
+			<div class="card confjson" style="display: flex; justify-content: space-around;">
+				<a href="./examples/10.png" target="_blank" class="confjson" rel="noopener noreferrer">
+					<img src="./examples/10.png" alt="Cypress Opening">
+
+				</a>
+			</div>
+			<!--  -->
+			<li><b>/GET/POST/PUT/DELETE</b> validation keys and change save name
+			</li>
+			<div class="card confjson" style="display: flex; justify-content: space-around;">
+				<a href="./examples/11.png" target="_blank" class="confjson" rel="noopener noreferrer">
+					<img src="./examples/11.png" alt="Cypress Opening">
+
+				</a>
+			</div>
+			<!--  -->
+			<li><b>/GET/POST/PUT/DELETE</b> validation schema
+				<a href="https://www.liquid-technologies.com/online-json-to-schema-converter"> Generate Schema</a>
+
+			</li>
+			<div class="card confjson" style="display: flex; justify-content: space-around;">
+				<a href="./examples/12.png" target="_blank" class="confjson" rel="noopener noreferrer">
+					<img src="./examples/12.png" alt="Cypress Opening">
+
+				</a>
+			</div>
+			<!--  -->
+			<li><b>/GET/POST/PUT/DELETE</b> using variables in <b>cypress.env.json</b>
+
+			</li>
+			<div class="card confjson" style="display: flex; justify-content: space-around;">
+				<a href="./examples/13.png" target="_blank" class="confjson" rel="noopener noreferrer">
+					<img src="./examples/13.png" alt="Cypress Opening">
+
+				</a>
+			</div>
+			<!--  -->
+			<li>Organize variables in <b>cypress.env.json</b>
+
+			</li>
+			<div class="card confjson" style="display: flex; justify-content: space-around;">
+				<a href="./examples/14.png" target="_blank" class="confjson" rel="noopener noreferrer">
+					<img src="./examples/14.png" alt="Cypress Opening">
+
+				</a>
+			</div>
+			<!--  -->
+			<li>Using before url in next request
+
+			</li>
+			<div class="card confjson" style="display: flex; justify-content: space-around;">
+				<a href="./examples/15.png" target="_blank" class="confjson" rel="noopener noreferrer">
+					<img src="./examples/15.png" alt="Cypress Opening">
+
+				</a>
+			</div>
+			<!--  -->
+			<li>Using token in headers Authorization
+
+			</li>
+			<div class="card confjson" style="display: flex; justify-content: space-around;">
+				<a href="./examples/16.png" target="_blank" class="confjson" rel="noopener noreferrer">
+					<img src="./examples/16.png" alt="Cypress Opening">
+
+				</a>
+			</div>
+			<!--  -->
+
+		</ol>
+	</div>
+
+</body>
+
+</html>
