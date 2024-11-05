@@ -6,7 +6,6 @@ body {
 	background-color: #1f2937;
 	color: white;
 	display: flex;
-	flex-direction: column;
 	margin-bottom: 50px;
 	overflow-y: hidden;
 }
@@ -81,10 +80,44 @@ img {
 	color: green;
 }
 
+.alert {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
+
+	.alert-title {
+		margin-right: 10px;
+		font-size: 18px;
+		color:white;
+		padding: 10px;
+		font-weight: bold;
+		border-radius: 10px;
+		animation: pulseAlert 1s infinite;
+	}
+}
+
+@keyframes pulseAlert {
+	0%, 100% {
+		box-shadow: 0 0 10px 2px rgba(231, 76, 60, 0.5);
+		color:rgba(231, 76, 60, 0.5);
+		/* Cor inicial */
+	}
+
+	50% {
+		box-shadow: 0 0 20px 4px rgba(231, 76, 60, 1);
+		color: rgba(231, 76, 60, 1)
+		/* Cor intermediária */
+	}
+
+
+}
 
 @media (max-width: 768px) {
 
+	.alert-title{
+		display: none;
+	}
 
 	.content {
 		display: block;

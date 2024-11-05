@@ -15,9 +15,15 @@
 
 	<div class="content">
 		<p>Follow these steps to install <strong>cypress-crud</strong>:</p>
+		<div class="alert">
+			<p class="alert-title">ALERT: </p>
+			<p>
+				Create a project from scratch, do not install cypress-crud when the project is already configured,
+				cypress-crud will renew the configuration files.</p>
+		</div>
+		<ul class="ulrequire">
+			<h3>Require:</h3>
 
-		<h3>Require:</h3>
-		<ul>
 			<li><a href="https://nodejs.org/pt/download/prebuilt-installer" target="_blank"
 					rel="noopener noreferrer">Node</a></li>
 		</ul>
@@ -25,7 +31,7 @@
 		<ol>
 			<li>Install Cypress using NPM:</li>
 			<pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar"
-				style="color: rgb(195, 206, 227); background-color: rgb(88, 91, 102);"><code><span  style="color: rgb(195, 206, 227);"><span >npm i cypress</span><br></span></code></pre>
+				style="color: rgb(195, 206, 227); background-color: rgb(88, 91, 102);"><code><span  style="color: rgb(195, 206, 227);"><span >npm i cypress-crud</span><br></span></code></pre>
 
 
 			<li>Open Cypress for the first time:</li>
@@ -37,7 +43,7 @@
 			</div>
 
 			<li>Configure your first test:</li>
-			<div class="card" >
+			<div class="card">
 				<img src="https://docs.cypress.io/img/app/end-to-end-testing/writing-your-first-end-to-end-test/enter-path-for-new-spec.png"
 					alt="Test Configuration" style="max-width: 700px;">
 			</div>
@@ -54,16 +60,12 @@
 					alt="Test Configuration">
 			</div>
 
-			<li>Install the <strong>cypress-crud</strong> package:</li>
-			<pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar"
-				style="color: rgb(195, 206, 227); background-color: rgb(88, 91, 102);"><code><span  style="color: rgb(195, 206, 227);"><span >npm i cypress-crud</span><br></span></code></pre>
-
 		</ol>
 	</div>
 	<script>
 		document.addEventListener('DOMContentLoaded', () => {
 			const sidebarContainer = document.getElementById('sidebar-container');
-		
+
 			// Verifica se o sidebar-container já tem o conteúdo carregado
 			if (sidebarContainer && sidebarContainer.innerHTML.trim() !== '') {
 				initializeSidebar();
@@ -78,20 +80,20 @@
 						}
 					}
 				});
-		
+
 				observer.observe(sidebarContainer, { childList: true });
 			}
-		
+
 			function initializeSidebar() {
 				const sidebar = document.querySelector('.sidebar');
 				const content = document.querySelector('.content');
-		
+
 				if (sidebar && content) {
 					const toggleButton = document.createElement('button');
 					toggleButton.classList.add('menu-toggle');
 					toggleButton.textContent = '☰'; // Ícone de hambúrguer
 					document.body.appendChild(toggleButton);
-		
+
 					toggleButton.addEventListener('click', () => {
 						sidebar.classList.toggle('open');
 						content.classList.toggle('shifted'); // Ajusta o conteúdo quando o sidebar está aberto
@@ -101,8 +103,8 @@
 				}
 			}
 		});
-		
-			</script>
+
+	</script>
 </body>
 
 </html>
