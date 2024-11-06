@@ -68,6 +68,74 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  const json6 = {
+    post: "POST",
+    p: "POST",
+    put: "PUT",
+    pu: "PUT",
+    delete: "DELETE",
+    d: "DELETE",
+    get: "GET",
+    g: "GET",
+    patch: "PATCH",
+    pa: "PATCH",
+    form: "form",
+    f: "form",
+    auth: "auth",
+    au: "auth",
+    status: "status",
+    statusCode: "status",
+    st: "status",
+    stc: "status",
+    headers: "headers",
+    header: "headers",
+    hs: "headers",
+    h: "header",
+    schema: "schema",
+    schemas: "schema",
+    sc: "schema",
+    contract: "schema",
+    body: "body",
+    payload: "body",
+    b: "body",
+    pl: "body",
+    qs: "qs",
+    param: "qs",
+    params: "qs",
+    mock: "mock",
+    m: "mock",
+    failOnStatusCode: "failOnStatusCode",
+    fs: "failOnStatusCode",
+    env: "env",
+    timeout: "timeout",
+    tt: "timeout",
+    encoding: "encoding",
+    en: "encoding",
+    gzip: "gzip",
+    retryOnStatusCodeFailure: "retryOnStatusCodeFailure",
+    rsc: "retryOnStatusCodeFailure",
+    retryOnNetworkFailure: "retryOnNetworkFailure",
+    rnf: "retryOnNetworkFailure",
+    followRedirect: "followRedirect",
+    fd: "followRedirect",
+    text: "text",
+    t: "text",
+    search: "search",
+    sh: "search",
+    condition: "condition",
+    c: "condition",
+    save: "save",
+    s: "save",
+    saveRequest: "saveRequest",
+    sr: "saveRequest",
+    request: "request",
+    e: "expect",
+    ex: "expect",
+  };
+  const json_6 = JSON.stringify(json6, null, 2);
+  document.getElementById("json6").textContent = json_6;
+
+  ////
   const json1 = {
     get: "https://reqres.in/api/users/2",
   };
@@ -118,4 +186,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const json_5 = JSON.stringify(json5, null, 2);
   document.getElementById("json5").textContent = json_5;
+
+  /////
 });

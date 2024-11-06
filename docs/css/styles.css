@@ -115,12 +115,18 @@ body {
 }
 
 @media (max-width: 768px) {
+    body{
+        display: flex;
+        height: auto;
+        overflow-y: auto;
+    }
     .content {
         max-width: 100%;
         padding: 0;
         margin: 0;
-        position: fixed;
         top: 0;
+        height: auto;
+        overflow-y: auto;
         align-items: center;
         justify-content: center;
     }
