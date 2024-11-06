@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
     headers: "headers",
     header: "headers",
     hs: "headers",
-    h: "header",
+    h: "headers",
     schema: "schema",
     schemas: "schema",
     sc: "schema",
@@ -188,4 +188,37 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("json5").textContent = json_5;
 
   /////
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const json7 = [
+    {
+      t: "generate token",
+      p: "/login",
+      b: { username: "admin", password: "admin" },
+      s: "token",
+    },
+    {
+      g: "/projects",
+      h: { authorization: "{token}" },
+    },
+    {
+      t: "create a new project",
+      p: "/projects",
+      b: {
+        name: "faker.name",
+        leader: "Alice Johnson",
+        description: "faker.text",
+        endDate: "2024-11-09",
+      },
+      s: "id",
+    },
+    {
+      t: "delete project id {id}",
+      d: "/projects/{id}",
+    },
+  ];
+
+  const json_7 = JSON.stringify(json7, null, 2);
+  document.getElementById("json7").textContent = json_7;
 });
