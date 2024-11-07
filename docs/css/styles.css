@@ -101,6 +101,11 @@ body {
     background: none;
     /* Remove o fundo de card */
 }
+.vt{
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding-bottom: 10px;
+}
 
 
 @keyframes backgroundAnimation {
@@ -237,7 +242,6 @@ body {
     font-weight: 700;
     transition-duration: .2s;
     background-color: #1e293b;
-    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.115);
 }
 
 .light:before,
