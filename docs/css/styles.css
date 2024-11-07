@@ -4,6 +4,7 @@
 
 
 body {
+
     margin: 0;
     font-family: 'Poppins', sans-serif;
     color: #ffffff;
@@ -19,11 +20,7 @@ body {
     max-width: 100%;
     justify-content: center;
     padding: 20px;
-    /* Adicionado um padding leve */
     border-radius: 15px;
-    background-color: #1e293b;
-    /* Mesmo fundo do sidebar */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     animation: fadeIn 1.5s ease-in-out;
     text-align: center;
 }
@@ -54,23 +51,37 @@ body {
     animation-delay: calc(var(--i) * 0.3s);
 }
 
+.title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
 @keyframes waveGlow {
     0% {
         opacity: 0.3;
         text-shadow: 0px 0px 5px cyan;
     }
+
     25% {
         opacity: 0.7;
         text-shadow: 0px 0px 15px cyan;
     }
+
     50% {
         opacity: 1;
         text-shadow: 0px 0px 40px cyan, 0px 0px 80px cyan;
     }
+
     75% {
         opacity: 0.7;
         text-shadow: 0px 0px 15px cyan;
     }
+
     100% {
         opacity: 0.3;
         text-shadow: 0px 0px 5px cyan;
@@ -115,11 +126,12 @@ body {
 }
 
 @media (max-width: 768px) {
-    body{
+    body {
         display: flex;
         height: auto;
         overflow-y: auto;
     }
+
     .content {
         max-width: 100%;
         padding: 0;
@@ -135,17 +147,15 @@ body {
         top: 100px;
     }
 
-    .version {
-        display: none;
-    }
-
     video {
         width: 80% !important;
         border-radius: 10px;
     }
-    .title{
+
+    .title {
         font-size: 2rem;
     }
+
 }
 
 @keyframes colorChange {
@@ -202,25 +212,79 @@ body {
     }
 }
 
-
-
-.version {
-    position: relative;
-    display: inline-block; /* Para garantir que o ponto de luz se posicione em relação à div */
+.container-version {
     padding: 10px;
-    overflow: hidden; /* Evita que o ponto de luz ultrapasse a área da div */
-    border-radius: 10%;
+
 }
 
-.version.light::before {
+
+.version.light {
+    --black: #000000;
+    --ch-black: #141414;
+    --eer-black: #1b1b1b;
+    --night-rider: #2e2e2e;
+    --white: #ffffff;
+    --af-white: #f3f3f3;
+    --ch-white: #e1e1e1;
+    border-radius: 8px;
+    width: 390px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    font-weight: 700;
+    transition-duration: .2s;
+    background-color: #1e293b;
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.115);
+}
+
+.light:before,
+.light:after {
     content: '';
     position: absolute;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%; /* Torna o ponto de luz circular */
-    background-color: cyan; /* Cor do ponto de luz */
-    box-shadow: 0 0 30px 10px cyan; /* Cria um efeito de brilho */
-    animation: rotateLight 5s linear infinite; /* Animação contínua */
+    left: -2px;
+    top: -2px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #1e293b,
+            #1e293b,
+            #1e293b,
+            var(--ch-white),
+            #1e293b,
+            #1e293b,
+            #1e293b,
+            #1e293b);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+
+    animation: steam 20s linear infinite;
+}
+
+
+
+@keyframes steam {
+    0% {
+        background-position: 0;
+
+    }
+
+    50% {
+        background-position: 400%;
+
+    }
+
+    100% {
+        background-position: 0;
+
+    }
+}
+
+.light:after {
+    filter: blur(100px);
+    /* Reduz o blur para não cobrir o conteúdo */
 }
 
 @keyframes rotateLight {
@@ -229,21 +293,25 @@ body {
         left: 50%;
         transform: translate(-50%, -50%);
     }
+
     25% {
         top: 50%;
         left: 100%;
         transform: translate(-50%, -50%);
     }
+
     50% {
         top: 100%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
+
     75% {
         top: 50%;
         left: 0;
         transform: translate(-50%, -50%);
     }
+
     100% {
         top: 0;
         left: 50%;

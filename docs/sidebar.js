@@ -69,6 +69,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const json6 = {
+    c: "POST",
+    r:"GET",
+    u: "PUT",
+    d:"DELETE",
     post: "POST",
     p: "POST",
     put: "PUT",
@@ -123,12 +127,13 @@ document.addEventListener("DOMContentLoaded", () => {
     search: "search",
     sh: "search",
     condition: "condition",
-    c: "condition",
+    cdt: "condition",
     save: "save",
     s: "save",
     saveRequest: "saveRequest",
     sr: "saveRequest",
     request: "request",
+    rq: "request",
     e: "expect",
     ex: "expect",
   };
