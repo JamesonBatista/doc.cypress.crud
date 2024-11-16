@@ -58,6 +58,54 @@ body {
     align-items: center;
 }
 
+.link {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 10px;
+    letter-spacing: 2px;
+    z-index: 1;
+}
+
+.link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent;
+    z-index: -1;
+    background: linear-gradient(120deg, #0026ff, #ffffff, #ff007a);
+    background-size: 200%;
+    animation: glow 1s linear infinite;
+    mask: linear-gradient(#000 50%, transparent 50%) top,
+          linear-gradient(#000 50%, transparent 50%) bottom,
+          linear-gradient(to right, #000 50%, transparent 50%) left,
+          linear-gradient(to left, #000 50%, transparent 50%) right;
+    mask-size: 100% 5px, 100% 5px, 5px 100%, 5px 100%;
+    mask-composite: exclude;
+    -webkit-mask-composite: destination-out;
+}
+
+@keyframes glow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
 
 
 
@@ -101,7 +149,8 @@ body {
     background: none;
     /* Remove o fundo de card */
 }
-.vt{
+
+.vt {
     font-weight: 700;
     letter-spacing: 3px;
     padding-bottom: 10px;
@@ -233,7 +282,7 @@ body {
     --ch-white: #e1e1e1;
     border-radius: 8px;
     width: 390px;
-    height: 80px;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;

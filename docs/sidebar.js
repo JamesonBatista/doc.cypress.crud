@@ -106,6 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
     qs: "qs",
     param: "qs",
     params: "qs",
+    pr: "qs",
     mock: "mock",
     m: "mock",
     failOnStatusCode: "failOnStatusCode",
