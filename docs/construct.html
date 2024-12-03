@@ -7,6 +7,7 @@
 	<title>Firs Test</title>
 	<link rel="stylesheet" href="./css/02.css">
 	<script src="./sidebar.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-tomorrow.min.css" rel="stylesheet">
 
 </head>
 
@@ -16,6 +17,15 @@
 	<div class="content">
 
 		<h2>Form use cypress-crud</h2>
+		<!-- <h3>Examples:</h3>
+		<span style="color: gray;">Create examples:
+			<span> in cypress.config.js add <p style="color: gray;">
+					createExamples: true
+				</p></span>
+		</span>
+		<span style="color: gray;">
+			After understanding all the tests, return createExamples to false, so that CI/CD does not create it every
+			time it runs.</span> -->
 		<ol>
 
 			<li>Create JSON in <b>cypress/fixtures</b> :</li>
@@ -74,7 +84,8 @@
 			</div>
 			<!--  -->
 
-			<li>Using start url whit / and cypress-crud get <b>base</b> or <b>baseUrl</b> in <b>cypress.env.json</b></li>
+			<li>Using start url whit / and cypress-crud get <b>base</b> or <b>baseUrl</b> in <b>cypress.env.json</b>
+			</li>
 
 			<div class="card" style="display: flex; justify-content: space-around;">
 				<a href="./img/54.png" target="_blank" rel="noopener noreferrer">
@@ -84,11 +95,109 @@
 			</div>
 			<!--  -->
 
+			<!--  -->
+
+			<li>Using external body/payload in request
+			</li>
+
+			<div class="card" style="display: flex; justify-content: space-around;">
+				<a href="./img/55.png" target="_blank" rel="noopener noreferrer">
+					<img src="./img/55.png" alt="Cypress Opening">
+
+				</a>
+			</div>
+			<!--  -->
+
+			<!--  -->
+
+			<li>Examples Use
+			</li>
+
+			<div class="card" style="display: flex; justify-content: space-around;">
+				<pre style=" background: #1e1e1e;
+				padding: 20px;
+				border-radius: 8px;
+				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);">
+					<code class="language-js">
+			import { faker, clone, crudStorage } from "../support/e2e";
+			describe("First test whit cypress-crud", () => {
+			  it("Test simple /get", () => {
+				cy.crud({ get: "https://reqres.in/api/users/2" });
+			  });
+			  it("Test simple /get whit description", () => {
+				cy.crud({ text: "/get user 2", get: "https://reqres.in/api/users/2" });
+			  });
+			  it("Test simple /get whit description validation", () => {
+				cy.crud({
+				  text: "/get user 2",
+				  get: "https://reqres.in/api/users/2",
+				  expect: "email",
+				});
+			  });
+			  it("Test simple /get whit description several validation", () => {
+				cy.crud({
+				  text: "/get user 2",
+				  get: "https://reqres.in/api/users/2",
+				  expect: "email, first_name",
+				});
+			  });
+			  it("Test equal", () => {
+				cy.crud({
+				  text: "/get user 2",
+				  get: "https://reqres.in/api/users/2",
+				  expect: "first_name === Janet",
+				});
+				cy.crud({
+				  text: "/get user 2",
+				  get: "https://reqres.in/api/users/2",
+				  expect: "id === 2",
+				});
+			  });
+			  it("get variable cypress.env.json", () => {
+				cy.crud({ get: "reqres_all" });
+				cy.crud({ get: "reqres_all/7" });
+				cy.crud({
+				  get: "reqres_all/7",
+				  schema: {
+					$schema: "http://json-schema.org/draft-04/schema#",
+					type: "object",
+					properties: {
+					  data: {
+						type: "object",
+						properties: {
+						  id: { type: "integer" },
+						  email: { type: "string" },
+						  first_name: { type: "string" },
+						  last_name: { type: "string" },
+						  avatar: { type: "string" },
+						},
+						required: ["id", "email", "first_name", "last_name", "avatar"],
+					  },
+					  support: {
+						type: "object",
+						properties: {
+						  url: { type: "string" },
+						  text: { type: "string" },
+						},
+						required: ["url", "text"],
+					  },
+					},
+					required: ["data", "support"],
+				  },
+				});
+			  });
+			});
+					</code>
+				</pre>
+			</div>
+			<!--  -->
+
 	</div>
 	</ol>
 	</div>
 
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-javascript.min.js"></script>
 
 </body>
 
