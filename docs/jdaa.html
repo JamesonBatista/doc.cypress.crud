@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tags</title>
+	<link rel="stylesheet" href="./css/02.css">
+	<script src="./sidebar.js"></script>
+<style>
+	p{
+		font-size: 1rem;
+	}
+</style>
+</head>
+
+<body>
+	<div id="sidebar-container"></div>
+
+	<div class="content">
+
+		<h2>What is JDAA?</h2>
+		<ol>
+
+
+			<div class="card">
+				<p>
+					<b>JSON-Driven API Automation (JDAA)</b>: A Revolutionary New Standard for API Testing
+					JSON-Driven API Automation (<b>JDAA</b>) is an innovative approach to API test automation that prioritizes
+					simplicity, scalability, and accessibility. Based on the use of JSON files or objects as a central
+					configuration source, <b>JDAA</b> eliminates the need for detailed coding to create tests, allowing even
+					developers with no experience using tools like Cypress to create and run tests efficiently.
+
+					What Makes <b>JDAA</b> Innovative?
+					<b>JDAA</b> transforms API testing by allowing all requests, validations, and flows to be configured
+					directly in JSON files or JavaScript objects. This approach completely abstracts the complexity of
+					traditional methods like cy.request in Cypress, simplifying automation operations. With <b>JDAA</b>, you
+					just describe what the test should do and the framework takes care of executing the technical
+					details.
+
+					This approach makes <b>JDAA</b> a solution not only for testers, but also for developers who want to
+					quickly and efficiently integrate API validations into their workflow.
+				</p>
+				<p>
+					How does <b>JDAA</b> work?
+					At the heart of <b>JDAA</b> is the idea of ​​declarative configuration. Instead of writing imperative code
+					for every API operation, you define the following information in a JSON:
+
+					Request Type <b>(GET, POST, PUT, DELETE, PATCH)</b>:
+					Specify which operation will be performed.
+					Endpoint:
+					Enter the URL or relative path of the API to be tested.
+					Payload (Request Body):
+					Configure the data sent for operations such as POST or PUT.
+					Validations (Expect):
+					Describe what should be validated in the response, whether it's a specific field, an HTTP status, or
+					both.
+					Schema:
+					Validate response contracts using predefined JSON structures, ensuring the API follows the expected
+					specification.
+				</p>
+
+				<p>
+					Benefits of <b>JDAA</b>
+					Ease of Test Creation:
+
+					Tests can be created quickly by just configuring settings in JSON. This drastically reduces the
+					learning curve and technical barrier for new testers and developers.
+					Multidisciplinary Collaboration:
+
+					As test creation is data-centric (JSON), both testers and developers can collaborate on automation
+					without the need for advanced technical knowledge.
+					Robust Validations:
+
+					Integrated support for value validations, contracts (schemes) and logical expressions.
+					Scalability and Simplified Maintenance:
+
+					Changes to tests are made directly in JSON, without modifying the code, making the maintenance
+					process quick and efficient.
+					Boilerplate Abolition:
+
+					Completely removes the need to write repetitive code such as cy.request and manual assertions.
+				</p>
+
+			</div>
+
+
+	</div>
+	</ol>
+	</div>
+
+</body>
+
+</html>
